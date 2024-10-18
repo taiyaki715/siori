@@ -57,6 +57,10 @@ export class ReadingHistory {
         return this._endDate;
     }
 
+    public get readingStatus(): ReadingStatus {
+        return this._readingStatus;
+    }
+
     public finishReading(): void {
         if (this._readingStatus === ReadingStatus.FINISHED) {
             throw new Error('既に読み終わっています。');
